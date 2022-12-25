@@ -1,0 +1,6 @@
+<div *ngIf="!isDataLoaded">witing for data to be loaded</div>
+<mat-grid-list cols="5" rowHeight="40%"  *ngIf="isDataLoaded" width="80%">
+  <mat-grid-tile *ngFor="let fileName of filesNames"
+    ><app-file-card [fileName]="fileName"> </app-file-card>
+  </mat-grid-tile>
+</mat-grid-list>

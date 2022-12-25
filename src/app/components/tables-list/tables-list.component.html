@@ -1,0 +1,19 @@
+<mat-accordion width="80%">
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+            files available
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+    </mat-expansion-panel>
+    <mat-expansion-panel  *ngFor="let table of tableList" >
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+           {{table.title}}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>table rows: {{table.rows}}</p>
+      <p>table columns: {{table.columns}}</p>
+      <p>table notes: {{table.notes}}</p>
+    </mat-expansion-panel>
+  </mat-accordion>
