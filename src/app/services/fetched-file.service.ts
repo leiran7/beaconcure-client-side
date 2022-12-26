@@ -7,12 +7,18 @@ import { Table } from '../interfaces/table';
 export class FetchedFileService {
   constructor() { }
   fileTables:Table[] = [];
+  fileName= "";
 
-  setFileTables(fileTables: Table[]){
+  setFileTables(fileTables: Table[], fileName:string){
     this.fileTables = fileTables;
+    this.fileName = fileName;
   }
 
   getFileTables(): Table[]{
     return this.fileTables;
+  }
+
+  getFileName(): string{
+    return this.fileName;
   }
 }

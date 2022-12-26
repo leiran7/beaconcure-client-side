@@ -1,11 +1,5 @@
+<h2>{{fileName}} table list:</h2>
 <mat-accordion width="80%">
-    <mat-expansion-panel hideToggle>
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-            files available
-        </mat-panel-title>
-      </mat-expansion-panel-header>
-    </mat-expansion-panel>
     <mat-expansion-panel  *ngFor="let table of tableList" >
       <mat-expansion-panel-header>
         <mat-panel-title>

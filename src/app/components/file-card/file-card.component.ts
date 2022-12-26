@@ -23,7 +23,7 @@ export class FileCardComponent implements OnInit {
   fileClicked(): void {
     this.loadingData = true;
     this.data.getFileContent(this.fileName).subscribe((data) => {
-      this.fetchedFile.setFileTables(data.tables);
+      this.fetchedFile.setFileTables(data.tables,this.fileName);
       this.router.navigateByUrl('/fileTables');
       this.loadingData = false;
     });

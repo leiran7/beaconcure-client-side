@@ -9,10 +9,12 @@ import { FetchedFileService } from 'src/app/services/fetched-file.service';
 })
 export class TablesListComponent implements OnInit {
   tableList:Table[] = [];
+  fileName :string ="";
   constructor(private fetchedFile:FetchedFileService) { }
 
   ngOnInit(): void {
     this.tableList = this.fetchedFile.getFileTables();
+    this.fileName = this.fetchedFile.getFileName();
   }
 
 }
